@@ -7,7 +7,7 @@
 
 /**
  * Plugin Name: Fernet Encryption
- * Plugin URI: https://accessnetworks.github.io/fernet-encryption/
+ * Plugin URI: https://wordpress.org/plugins/fernet-encryption/
  * Description: Secure WordPress data with Fernet Encryption.
  * Version: 1.0.9
  * Author: bhubbard, hubbardlabs
