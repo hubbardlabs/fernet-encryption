@@ -157,7 +157,7 @@ function fernet_block_enqueue() {
 		filemtime( plugin_dir_path( __FILE__ ) . 'blocks/fernet-encryption-block.js' )
 	);
 
-	wp_enqueue_script( 'my-block-script' );
+	wp_enqueue_script( 'fernet-block-script' );
 }
 add_action( 'enqueue_block_editor_assets', 'fernet_block_enqueue' );
 
