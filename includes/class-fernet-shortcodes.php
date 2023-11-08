@@ -43,7 +43,6 @@ if ( ! class_exists( 'Fernet_Shortcodes' ) ) {
 		public function fernet_decrypt_shortcode( $atts, $content = null ) {
 			return fernet_decrypt( $content );
 		}
-
 	}
 
 	new Fernet_Shortcodes();

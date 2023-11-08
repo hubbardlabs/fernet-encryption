@@ -89,7 +89,6 @@ if ( ! class_exists( 'Fernet_Rest_API' ) ) {
 					),
 				)
 			);
-
 		}
 
 		/**
@@ -109,7 +108,6 @@ if ( ! class_exists( 'Fernet_Rest_API' ) ) {
 			$args       = array();
 			$encryption = fernet_encrypt( $message, $args );
 			return rest_ensure_response( $encryption );
-
 		}
 
 		/**
@@ -129,7 +127,6 @@ if ( ! class_exists( 'Fernet_Rest_API' ) ) {
 
 			$message = fernet_decrypt( $token, $args );
 			return rest_ensure_response( $message );
-
 		}
 
 
@@ -146,9 +143,7 @@ if ( ! class_exists( 'Fernet_Rest_API' ) ) {
 			}
 
 			return true;
-
 		}
-
 	}
 
 	new Fernet_Rest_API();

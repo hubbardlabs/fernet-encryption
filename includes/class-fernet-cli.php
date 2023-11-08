@@ -87,8 +87,6 @@ if ( ! class_exists( 'Fernet_CLI' ) && class_exists( 'WP_CLI_Command' ) ) {
 			$message = fernet_decrypt( $token );
 			WP_CLI::success( $message );
 		}
-
 	}
 	WP_CLI::add_command( 'fernet', 'Fernet_CLI' );
 }
-

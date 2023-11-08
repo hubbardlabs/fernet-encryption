@@ -111,7 +111,6 @@ if ( ! function_exists( 'fernet_get_user_meta' ) ) {
 			}
 			return $meta;
 		}
-
 	}
 }
 

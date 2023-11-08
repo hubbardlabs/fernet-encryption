@@ -94,7 +94,6 @@ if ( ! function_exists( 'fernet_key_exists' ) ) {
 		}
 
 		return false;
-
 	}
 }
 
