@@ -146,3 +146,73 @@ if ( ! function_exists( 'fernet_admin_notice' ) ) {
 	}
 	add_action( 'admin_notices', 'fernet_admin_notice' );
 }
+
+
+
+function fernet_block_enqueue() {
+	wp_register_script(
+		'fernet-block-script',
+		plugin_dir_url( __FILE__ ) . 'blocks/fernet-encryption-block.js',
+		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-components' ),
+		filemtime( plugin_dir_path( __FILE__ ) . 'blocks/fernet-encryption-block.js' )
+	);
+
+	wp_enqueue_script( 'my-block-script' );
+}
+add_action( 'enqueue_block_editor_assets', 'fernet_block_enqueue' );
+
+
+
+function fernet_register_block() {
+	register_block_type(
+		'fernet-encryption/encrypted-content-block',
+		array(
+			'editor_script'   => 'fernet-block-script',
+			'editor_style'    => 'fernet-block-script',
+			'render_callback' => 'fernet_render_block_callback',
+		)
+	);
+}
+add_action( 'init', 'fernet_register_block' );
+
+function fernet_render_block_callback( $attributes, $content ) {
+	$stored_token = get_post_meta( get_the_ID(), 'stored_token_key', true );
+
+	if ( isset( $_POST['fernet_key'] ) && ! empty( $stored_token ) ) {
+		$provided_key = sanitize_text_field( $_POST['fernet_key'] );
+
+		$decrypted_data = fernet_decrypt( $stored_token, $provided_key );
+
+		if ( $decrypted_data ) {
+			// If decryption succeeds, display the content
+			return '<div>' . $decrypted_data . '</div>';
+		} else {
+			// Display the form again if decryption fails
+			return fernet_block_get_form();
+		}
+	} else {
+		// Display the form for entering the Fernet encryption key
+		return fernet_block_get_form();
+	}
+}
+
+function fernet_block_get_form() {
+	return '
+    <form method="post">
+        <label for="fernet_key">Enter Fernet Encryption Key:</label>
+        <input type="text" id="fernet_key" name="fernet_key">
+        <input type="submit" value="Submit">
+    </form>';
+}
+
+function fernet_block_save_content( $post_id ) {
+	if ( ! isset( $_POST['your_block_content'] ) ) {
+		return;
+	}
+
+	$content = sanitize_text_field( $_POST['your_block_content'] );
+	$token   = fernet_encrypt( $content );
+
+	update_post_meta( $post_id, 'stored_token_key', $token );
+}
+add_action( 'save_post', 'fernet_block_save_content' );
