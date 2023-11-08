@@ -1,0 +1,68 @@
+# Copyright (C) 2023 bhubbard, hubbardlabs
+# This file is distributed under the same license as the Fernet Encryption package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Fernet Encryption 1.0.9\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/fernet-encryption\n"
+"POT-Creation-Date: 2023-11-08 17:15:47+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: fernet-encryption.php:139
+msgid "Warning: You have not defined a Fernet Key."
+msgstr ""
+
+#: fernet-encryption.php:140
+msgid ""
+"We have auto-generated one for you based off the WordPress Salts, please "
+"setup a new key in your wp-config.php file."
+msgstr ""
+
+#: fernet-encryption.php:142
+msgid "Temp Fernet Key:"
+msgstr ""
+
+#: includes/class-fernet.php:76 includes/class-fernet.php:241
+msgid "Fernet Encryption requires mcrypt_create_iv and openssl_random_pseudo_bytes."
+msgstr ""
+
+#: includes/class-fernet.php:82
+msgid "The key length appears to be invalid."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Fernet Encryption"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://accessnetworks.github.io/fernet-encryption/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Secure WordPress data with Fernet Encryption."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "bhubbard, hubbardlabs"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://hubbardlabs.com"
+msgstr ""

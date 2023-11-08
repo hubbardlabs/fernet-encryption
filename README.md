@@ -1,23 +1,23 @@
-=== Fernet Encryption ===
-Contributors: bhubbard, hubbardlabs
-Donate link: https://hubbardlabs.com
-Tags: fernet, encryption, security
-Requires at least: 6.0
-Tested up to: 6.4
-Requires PHP: 8.0
-Stable tag: 1.0.9
-License: GPLv3 or later
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+# Fernet Encryption #
+**Contributors:** [bhubbard](https://profiles.wordpress.org/bhubbard/), [hubbardlabs](https://profiles.wordpress.org/hubbardlabs/)  
+**Donate link:** https://hubbardlabs.com  
+**Tags:** fernet, encryption, security  
+**Requires at least:** 6.0  
+**Tested up to:** 6.4  
+**Requires PHP:** 8.0  
+**Stable tag:** 1.0.9  
+**License:** GPLv3 or later  
+**License URI:** https://www.gnu.org/licenses/gpl-3.0.html  
 
 Fernet Encryption is a plugin that can be used to encrypt and decrypt data in WordPress using fernet.
 
-== Description ==
+## Description ##
 
 Fernet Encryption is a plugin that can be used to encrypt and decrypt data in WordPress using fernet.
 
 Development was originally sponsered by Access Networks.
 
-=== Setup your Key ===
+# Setup your Key #
 
 To setup your key, you need to add the following line to your wp-config file.
 
@@ -29,7 +29,7 @@ If you choose not to setup your key, you will need to save a copy of the one pro
 
 *IMPORTANT: Changing your WordPress salts will invalidate the default Fernet key provided.*
 
-=== How to Use ===
+# How to Use #
 
 To encrypt data simply use `$token = fernet_encrypt( 'YOUR MESSAGE' )` in your code.
 
@@ -55,29 +55,29 @@ We have also added useful helper functions:
  * fernet_get_option
  * fernet_update_option
 
-=== Credit ===
+# Credit #
 
 - Illustrations provided by undraw.co
 - Fernent PHP modified from Kelvin Mo - Fernet-PHP
 
-== Changelog ==
+## Changelog ##
 
-= 1.0.7 =
+### 1.0.7 ###
 * Readme improvements
 
-= 1.0.6 =
+### 1.0.6 ###
 * Add support for WordPress Rest API.
 * Add support for WordPress CLI.
 
-= 1.0.5 =
+### 1.0.5 ###
 * Added Helper Functions.
 
-= 1.0.4 =
+### 1.0.4 ###
 * Updated Readme
 
-= 1.0.3 =
+### 1.0.3 ###
 * Updated Readme.
 * Provided shortcodes for encrypting and decrypting.
 
-= 1.0.0 =
+### 1.0.0 ###
 * First release.
