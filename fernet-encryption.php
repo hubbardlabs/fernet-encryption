@@ -140,7 +140,7 @@ if ( ! function_exists( 'fernet_admin_notice' ) ) {
 			<p><strong><?php esc_html_e( 'Warning: You have not defined a Fernet Key.', 'fernet-encryption' ); ?></strong></p>
 			<p><?php esc_html_e( 'We have auto-generated one for you based off the WordPress Salts, please setup a new key in your wp-config.php file.', 'fernet-encryption' ); ?></p>
 			<pre><code>define( FERNET_KEY, 'YOUR-KEY' );</code></pre>
-			<p><strong><?php esc_html_e( 'Temp Fernet Key:', 'fernet-encryption' ); ?></strong> <?php echo esc_html( fernet_key() ); ?></p>
+			<p><strong><?php esc_html_e( 'Temp Fernet Key:', 'fernet-encryption' ); ?></strong> <pre><code><?php echo esc_html( fernet_key() ); ?></code></pre></p>
 		</div>
 			<?php
 		}
